@@ -25,6 +25,21 @@ let Alunos = [];
 
 let Contador1 = 0;
 
+if(localStorage.getItem('DarkModeOnOff') != null)
+{
+    switch(localStorage.getItem('DarkModeOnOff'))
+    {
+        case 'Off':
+            Contador1 = 1;
+            break;
+
+        case 'On':
+            Contador1 = 0;
+            break;
+    }
+    Darkear()
+}
+
 DarkMode.addEventListener('click', Darkear);
 
 function Darkear()
@@ -51,6 +66,7 @@ function Darkear()
             Invertidos[c].style.filter = 'invert(1)';
             Invertidos[c].style.borderColor = 'white';
         }
+        localStorage.setItem('DarkModeOnOff', 'On');
     }
     else
     {
@@ -74,6 +90,7 @@ function Darkear()
             Invertidos[c].style.filter = 'invert(0)';
             Invertidos[c].style.borderColor = 'black';
         }
+        localStorage.setItem('DarkModeOnOff', 'Off');
     }
 }
 
