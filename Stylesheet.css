@@ -1,0 +1,324 @@
+
+:root {
+  --CorDeFundo: white;
+}
+
+*
+{
+    margin: 0px;
+
+    font-family: sans-serif;
+}
+
+::-moz-focus-inner
+{
+    border: 0;
+}
+
+
+html
+{
+    background-color: white;
+}
+
+form
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 65%;
+
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+}
+
+#Titulo
+{
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-size: 80px;
+}
+
+input
+{
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 8px;
+
+    box-shadow: black;
+    
+    height: 40px;
+
+    font-size: 30px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 40px;
+
+    padding: 5px;
+
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.295);
+
+    transition-property: box-shadow, transform;
+    transition-duration: 0.2s, 0.15s;
+    transition-timing-function: ease-in, ease-in-out;
+}
+
+input[type=number]::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+}
+
+input:focus
+{
+    box-shadow: 0px 0px 0px 3.5px var(--CorDeFundo), 0px 0px 0px 7px rgb(255, 184, 30);
+}
+
+input:hover
+{
+    transform: scale(1.02);
+}
+
+#Nome
+{
+    width: calc(30% - 30px);
+    flex-shrink: 2;
+}
+
+#SobreNome
+{
+    width: calc(60% - 30px);
+    flex-shrink: 1;
+}
+
+#RA
+{
+    width: calc(10% - 30px);
+    flex-shrink: 3;
+}
+
+.Notas
+{
+    width: calc(100%/3 - 30px);
+    flex-shrink: 1;
+}
+
+#MediaDoSis
+{
+    width: calc(100% - 30px);
+    flex-shrink: 1;
+}
+
+#Enviar
+{
+    margin-top: 60px;
+
+    width:  calc(100%);
+
+    cursor: pointer;
+    height: 70px;
+
+    background-color: rgba(102, 255, 122, 0.836);
+
+    box-shadow: none;
+}
+
+#Enviar:focus
+{
+    box-shadow: 0px 0px 0px 3.5px var(--CorDeFundo), 0px 0px 0px 7px rgb(255, 184, 30);
+}
+
+#Resetar
+{
+    width:  calc(50% - 10px);
+
+    cursor: pointer;
+    height: 70px;
+
+    background-color: rgb(235, 112, 112);
+
+    margin-top: 20px;
+
+    box-shadow: none;
+}
+
+#Resetar:focus
+{
+    box-shadow: 0px 0px 0px 3.5px var(--CorDeFundo), 0px 0px 0px 7px rgb(255, 184, 30);
+}
+
+#Listar
+{
+    width:  calc(50% - 10px);
+
+    cursor: pointer;
+    height: 70px;
+
+    background-color: rgb(140, 221, 210);
+
+    margin-top: 20px;
+
+    box-shadow: none;
+}
+
+#Listar:focus
+{
+    box-shadow: 0px 0px 0px 3.5px var(--CorDeFundo), 0px 0px 0px 7px rgb(255, 184, 30);
+}
+
+#Lista
+{
+    margin-top: 20px;
+}
+
+#TituloL
+{
+    font-size: 80px;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 60px;
+
+    display: none;
+}
+
+.ItensDaLista
+{
+    text-align: center;
+
+    font-size: 35px;
+
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#DarkMode
+{
+    position: absolute;
+
+    padding: 5px;
+
+    top: -4px;
+    left: 30px;
+
+    width: 80px;
+
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    cursor: pointer;
+
+    background-color: rgb(243, 242, 235);
+
+    transition-property: filter, transform;
+    transition-duration: 0.4s, 0.5s;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
+@media only screen and (max-width: 1095px)
+{
+    #Nome
+    {
+        width: calc(26% - 30px);
+    }
+
+    #RA
+    {
+        width: calc(14% - 30px);
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    form
+    {
+        width: 90%;
+    
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #Nome
+    {
+        width: calc(25% - 30px);
+    }
+    
+    #SobreNome
+    {
+        width: calc(60% - 30px);
+    }
+    
+    #RA
+    {
+        width: calc(15% - 30px);
+    }
+
+    #Resetar
+    {
+        width:  100%;
+    }
+    
+    #Listar
+    {
+        width:  100%;
+    }
+}
+
+@media only screen and (max-width: 540px)
+{
+    input
+    {
+        margin-bottom: 18px;
+    }
+    
+    #Titulo
+    {
+        font-size: 65px;
+    }
+
+    #TituloL
+    {
+        font-size: 65px;
+    }
+
+    #Nome
+    {
+        width: 100%;
+    }
+    
+    #SobreNome
+    {
+        width: 100%;
+    }
+    
+    #RA
+    {
+        width: 100%;
+    }
+
+    .Notas
+    {
+        width: 100%;
+    }
+
+    #Resetar
+    {
+        width:  100%;
+    }
+    
+    #Listar
+    {
+        width:  100%;
+    }   
+}
